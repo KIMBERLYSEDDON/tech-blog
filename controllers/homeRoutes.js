@@ -42,6 +42,8 @@ router.get('/post/:id', async (req, res) => {
 
     res.render('post', {
       ...post,
+      user_id: req.session.user_id,
+      username: req.session.username,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -58,9 +60,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Post }],
     });
-console.log(req.session.user_id)
     const user = userData.get({ plain: true });
-    console.log("LOOOOOOK HERE")
     res.render('dashboard', {
       ...user,
       logged_in: true

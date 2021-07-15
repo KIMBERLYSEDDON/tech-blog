@@ -21,6 +21,7 @@
 </section>
 
 <section class="card w-50 p-b-5 m-2 mx-auto">
+  <form class="form new-comment-form">
   <h3 class="comment-title">Leave a comment here!</h3>
   <div class="mb-3">
     <label for="usernameInput" class="form-label">Username</label>
@@ -28,13 +29,17 @@
       type="text"
       class="form-control"
       id="usernameInput"
-      value="{{session.username}}"
+      value="{{username}}"
     />
   </div>
   <div class="mb-3">
-    <label for="commentInput" class="form-label">Comment</label>
-    <textarea class="form-control" id="commentInput" rows="3"></textarea>
+    <label for="message" class="form-label">Comment</label>
+    <textarea class="form-control" id="message" rows="3"></textarea>
   </div>
+  <div class="form-label">
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+  </form>
 </section>
 
 {{!-- <div class="card w-50 p-b-5 m-2 mx-auto post-card">
@@ -45,3 +50,4 @@
   </div>
   </a>
 </div> --}}
+<script src="./js/comment.js"></script>

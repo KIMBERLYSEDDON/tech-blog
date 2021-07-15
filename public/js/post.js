@@ -1,8 +1,8 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#usernameInput').value.trim();
-    const comment = document.querySelector('#commentInput').value.trim();
+    const title = document.querySelector('#post-title').value.trim();
+    const content = document.querySelector('#content').value.trim();
   
     if (title && content) {
       const response = await fetch(`/dashboard`, {
