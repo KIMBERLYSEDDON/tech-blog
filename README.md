@@ -8,7 +8,7 @@ This application was built to create a space where tech lovers can come together
 
 To use this application go to the link provided and create an account. After you log in you may make posts and view your posts/comments. 
 
-
+https://tech-obsessed.herokuapp.com/
 
 ## Usage 
 
