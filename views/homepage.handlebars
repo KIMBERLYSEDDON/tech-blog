@@ -1,0 +1,11 @@
+{{#each posts as |post|}}
+  <div class="card w-50 p-b-5 m-2 mx-auto post-card">
+    <a href="/post/{{id}}">
+    <div class="card-body">
+      <h5 class="card-header post-header">{{title}}</h5> 
+      <p class="text-end creator"> by user: {{user.username}}, on {{format_date date_posted}}</p>
+      <p class="card-text post-content p-3">{{content}}</p>
+    </div>
+    </a>
+  </div>
+{{/each}}

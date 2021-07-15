@@ -1,0 +1,47 @@
+<section class="card w-50 p-b-5 m-2 mx-auto post-card">
+  <a href="/post/{{id}}">
+    <div class="card-body">
+      <h5 class="card-header post-header">{{title}}</h5>
+      <p class="text-end creator"> by user: {{user.username}}, on {{format_date date_posted}}</p>
+      <p class="card-text post-content">{{content}}</p>
+    </div>
+  </a>
+</section>
+<section class="comments">
+  {{#each comment}}
+  <div class="card">
+  <div class="card-header">
+    {{user.username}}
+  </div>
+  <div class="card-body">
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div>
+  {{/each}}
+</section>
+
+<section class="card w-50 p-b-5 m-2 mx-auto">
+  <h3 class="comment-title">Leave a comment here!</h3>
+  <div class="mb-3">
+    <label for="usernameInput" class="form-label">Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="usernameInput"
+      value="{{session.username}}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="commentInput" class="form-label">Comment</label>
+    <textarea class="form-control" id="commentInput" rows="3"></textarea>
+  </div>
+</section>
+
+{{!-- <div class="card w-50 p-b-5 m-2 mx-auto post-card">
+  <a href="/post/{{id}}">
+  <div class="card-body">
+    <h5 class="card-header post-header">{{title}}</h5> <p class="text-end creator"> by user: {{creator}}</p>
+    <p class="card-text post-content">{{content}}</p>
+  </div>
+  </a>
+</div> --}}

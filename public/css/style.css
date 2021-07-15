@@ -1,0 +1,54 @@
+/* * {
+    background-color: #FAE1FF;
+} */
+a {
+    text-decoration: none;
+}
+nav a {
+    color: white !important;
+    font-size: 30px;
+    padding-left: 100px;
+}
+.posts {
+    margin-left: auto;
+
+}
+.post-card {
+    border-color: #DED46A;
+    color: #A69B68 !important;
+}
+.post-header {
+    background-color: #A69B68;
+    color: white !important;
+}
+.post-content {
+    color: #A69B68 !important;
+    
+}
+.creator {
+    color: #78306B;
+}
+.new-post-form {
+    color: #78306B;
+    margin-left: 20px;
+}
+.post-list {
+    color: #78306B
+}
+.login-card {
+    color: #78306B;
+    position: relative;
+    padding: 10px;
+    border: 2px solid #78306B;
+    border-radius: 20px;
+    display: inline;
+    width: 250px;
+    margin: 20px;
+}
+.btn {
+    background-color: #78306B !important;
+    border: none;
+}
+.btn:hover {
+    background-color: #BE9ED9 !important;
+}
