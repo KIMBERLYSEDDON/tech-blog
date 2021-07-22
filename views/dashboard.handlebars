@@ -24,7 +24,7 @@
     </div>
 
     {{#if posts.length}}
-      <div class="col-md-6 post-list">
+      <div class="col-md-6 post-list m-auto">
         <h3>Your Posts:</h3>
 
         {{#each posts as |post|}}
@@ -36,10 +36,11 @@
                   <p class="card-text post-content">{{content}}</p>
                 </div>
               </a>
-            </div>
-                  <div class="col-md-4">
+                                <div class="col-md-4 p-2 m-auto">
         <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
       </div>
+            </div>
+
           </div>
         {{/each}}
       </div>

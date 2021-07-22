@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../models');
-const { Post } = require('../models')
+const { Post } = require('../models');
+const { Comment } = require('../models')
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -35,11 +36,19 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+          model: Comment
+        }
       ],
     });
 
     const post = postData.get({ plain: true });
-
+    for (let i = 0; i < post.comments.length; i++) {
+      if (post.comments[i].username === req.session.username) {
+        post.comments[i].displayDelete = true;
+      }
+    }
+console.log(post)
     res.render('post', {
       ...post,
       user_id: req.session.user_id,

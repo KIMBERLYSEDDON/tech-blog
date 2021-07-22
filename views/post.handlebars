@@ -19,7 +19,19 @@
 </div>
   {{/each}}
 </section>
+ {{#if comments}}
+<section class="card w-50 p-b-5 m-2 mx-auto comments">
+    <ul class="list-group list-group-flush">
+ {{#each comments as |comment|}}
+    <li class="list-group-item">{{comment.message}}<p class="pt-3 mb-0 text-end comuser">{{comment.username}} on {{format_date date_posted}}</p>
+              {{#if comment.displayDelete}}
 
+          <button id="delBtn" class="button" data-id="{{comment.id}}"><i class="far fa-trash-alt"></i></button>
+          {{/if}}</li>
+ {{/each}}
+ </ul> 
+</section>
+{{/if}}
 <section class="card w-50 p-b-5 m-2 mx-auto">
   <form class="form new-comment-form">
   <h3 class="comment-title">Leave a comment here!</h3>
@@ -34,7 +46,7 @@
   </div>
   <div class="mb-3">
     <label for="message" class="form-label">Comment</label>
-    <textarea class="form-control" id="message" rows="3"></textarea>
+    <textarea class="form-control" id="message" data-post-id="{{id}}" rows="3"></textarea>
   </div>
   <div class="form-label">
           <button type="submit" class="btn btn-primary">Post</button>
@@ -50,4 +62,4 @@
   </div>
   </a>
 </div> --}}
-<script src="./js/comment.js"></script>
+<script src="/js/comment.js"></script>

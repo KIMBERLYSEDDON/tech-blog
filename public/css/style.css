@@ -52,3 +52,8 @@ nav a {
 .btn:hover {
     background-color: #BE9ED9 !important;
 }
+.comuser {
+    font-style: italic;
+    font-size: smaller;
+    color: rgb(102, 95, 102)
+}
